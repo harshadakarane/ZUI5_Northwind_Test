@@ -1,0 +1,54 @@
+<core:View controllerName="northwind.test.view.Details" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout"
+	xmlns:ui="sap.ca.ui" xmlns="sap.m">
+	<Page id="DetailsPage" navButtonPress="onNavBack" showNavButton="true" title="{i18n>detailTitle}">
+		<content>
+			<ObjectHeader id="details_object_header" number="{ContactName}" numberUnit="{City}" title="{CustomerID}">
+				<statuses id="details_statuses">
+					<ObjectStatus id="details_statuses_status1" state="None" text="{Country}"></ObjectStatus>
+				</statuses>
+				<attributes id="details_attributes">
+					<ObjectAttribute id="details_attributes_att1" text="{Region}" title=""></ObjectAttribute>
+					<ObjectAttribute id="details_attributes_att2" text="" title=""></ObjectAttribute>
+					<ObjectAttribute id="details_attributes_att3" text="" title=""></ObjectAttribute>
+				</attributes>
+			</ObjectHeader>
+			<!--Extension Point 1-->
+			<core:ExtensionPoint name="extensionAfterObjectHeader"/>
+			<!--Navigation Table -->
+			<Table class="navTableControlLayout" growing="true" growingScrollToLoad="true" id="navigationTable">
+				<headerToolbar id="navigationTable_headerToolbar">
+					<Toolbar id="navigationTable_headerToolbar_toolbar">
+						<Label class="sapMH4FontSize" id="navigationTable_headerToolbar_toolbar_title" text=""/>
+					</Toolbar>
+				</headerToolbar>
+				<columns id="navigationTable_columns">
+					<Column demandPopin="true" hAlign="Left" id="navigationTable_columns_col1" minScreenWidth="Tablet" vAlign="Top" width="33%">
+						<header id="navigationTable_columns_col1_header">
+							<Label id="navigationTable_columns_col1_header_label" text=""/>
+						</header>
+					</Column>
+					<Column demandPopin="true" hAlign="Left" id="navigationTable_columns_col2" minScreenWidth="Tablet" vAlign="Top" width="33%">
+						<header id="navigationTable_columns_col2_header">
+							<Label id="navigationTable_columns_col2_header_label" text=""/>
+						</header>
+					</Column>
+					<Column demandPopin="true" hAlign="Left" id="navigationTable_columns_col3" minScreenWidth="Tablet" vAlign="Top" width="33%">
+						<header id="navigationTable_columns_col3_header">
+							<Label id="navigationTable_columns_col3_header_label" text=""/>
+						</header>
+					</Column>
+				</columns>
+				<ColumnListItem id="navigationListItem">
+					<cells id="navigationListItem_cells">
+						<Text id="navigationListItem_cells_cell_1" text=""/>
+						<Text id="navigationListItem_cells_cell_2" text=""/>
+						<Text id="navigationListItem_cells_cell_3" text=""/>
+					</cells>
+				</ColumnListItem>
+			</Table>
+			<!--Extension Point 2-->
+			<core:ExtensionPoint name="extensionAfterNavigationTable"/>
+		</content>
+		<footer></footer>
+	</Page>
+</core:View>

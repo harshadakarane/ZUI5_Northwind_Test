@@ -1,0 +1,54 @@
+{
+  "run": [
+    {
+      "filePath": "/ZUI5_Northwind_Test-2/localIndex.html",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [
+        {
+          "source": "Northwind",
+          "destinations": "Northwind"
+        }
+      ],
+      "destBackendSystem": [
+        "DS2"
+      ],
+      "_metadata": {
+        "runnerId": "webapprunner",
+        "id": 8370751,
+        "displayName": "New Web Application 1"
+      }
+    },
+    {
+      "filePath": "/ZUI5_Northwind_Test/Component.js",
+      "previewMode": 1,
+      "dataMode": 1,
+      "workspace": "withoutWorkspace",
+      "ui5ActiveVersion": null,
+      "ui5VerSource": null,
+      "isDefaultVersion": 0,
+      "urlParameters": [],
+      "hashParameter": "",
+      "backendSystem": [
+        {
+          "source": "Northwind",
+          "destinations": "Northwind"
+        }
+      ],
+      "destBackendSystem": [
+        "DS2"
+      ],
+      "_metadata": {
+        "runnerId": "fiorirunner",
+        "id": 6878992,
+        "displayName": "New SAP Fiori Component on Sandbox 4"
+      }
+    }
+  ]
+}

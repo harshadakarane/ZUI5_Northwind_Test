@@ -1,0 +1,51 @@
+<core:View controllerName="northwind.test.view.Master" xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns:table="sap.ui.table"
+	xmlns="sap.m">
+	<Page id="productListPage" navButtonPress="onNavBack" showNavButton="true" title="{i18n>masterTitle}">
+		<content>
+				
+				
+				<Table class="navTableControlLayout" growing="true" growingScrollToLoad="true" id="catalogTable" items="{/Customers}">
+				<headerToolbar id="catalogTable_headerToolbar">
+					<Toolbar id="tableToolbar">
+						<Label class="sapMH4FontSize" id="catalogTitle" text="{viewProperties>/catalogTitleText}" visible="{viewProperties>/catalogTitleVisible}"/>
+						<ToolbarSpacer id="toolbarSpacer"/>
+						<SearchField id="searchField" placeholder="{i18n>masterSearchPlaceholder}" search="onSearchPressed" showRefreshButton="false"
+							tooltip="{i18n>masterSearchTooltip}" width="{viewProperties>/searchFieldWidth}"/>
+					</Toolbar>
+				</headerToolbar>
+				<columns id="catalogTable_columns">
+					<Column hAlign="Left" id="catalogTable_col1" width="{viewProperties>/availabilityColumnWidth}">
+						<header id="catalogTable_col1_header">
+							<Label id="catalogTable_col1_label" text=""/>
+						</header>
+					</Column>
+					<Column hAlign="Left" id="catalogTable_col2" width="{viewProperties>/availabilityColumnWidth}">
+						<header id="catalogTable_col2_header">
+							<Label id="catalogTable_col2_label" text=""/>
+						</header>
+					</Column>
+					<Column demandPopin="true" hAlign="Right" id="catalogTable_col3" minScreenWidth="Tablet" width="10%">
+						<header id="catalogTable_col3_header">
+							<Label id="catalogTable_col3_label" text=""/>
+						</header>
+					</Column>
+					<Column hAlign="Right" id="catalogTable_col4" width="{viewProperties>/availabilityColumnWidth}">
+						<header id="catalogTable_col4_header">
+							<Label id="catalogTable_col4_label" text=""/>
+						</header>
+					</Column>
+				</columns>
+				<ColumnListItem class="navTableItemLayout" id="columnListItem" press="onLineItemPressed" type="Navigation" vAlign="Middle">
+					<cells id="columnListItem_cells">
+						<Text id="columnListItem_cell_1" maxLines="2" text="{CustomerID}"></Text>
+						<Text id="columnListItem_cell_2" maxLines="2" text="{Region}"></Text>
+						<ObjectNumber id="columnListItem_cell_3"
+							number="{parts:[{path:'ContactName'}, {path:'City'}], formatter: 'sap.ca.ui.model.format.AmountFormat.FormatAmountStandard'}" unit="{City}"></ObjectNumber>
+						<ObjectStatus id="columnListItem_cell_4" state="None" text="{Country}"></ObjectStatus>
+					</cells>
+				</ColumnListItem>
+			</Table>
+		</content>
+		<footer></footer>
+	</Page>
+</core:View>
